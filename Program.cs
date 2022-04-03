@@ -15,7 +15,7 @@ namespace Generics
             double[] doubleArr = { 10.34, 34.36, 23.78, 56.12 };
             char[] charArr = { 'H', 'E', 'L', 'L', 'L', 'O' };
             Console.WriteLine("1:PrintArray without generic method\n2:PrintArray with method\n3:GenericClass Concept\n" +
-                "4:FindMaximum Value\n5:GenericFindMax\n"); 
+                "4:FindMaximum Value\n5:GenericFindMax\n6:FindMaxValue Using Array sort method"); 
                
                
             int option = Convert.ToInt32(Console.ReadLine());
@@ -57,6 +57,10 @@ namespace Generics
                     new GenericFindMax<int>(10,34,56).TestMaximumValue();//create object
                     new GenericFindMax<float>(70.23f, 23.34f, 25.56f).TestMaximumValue();
                     new GenericFindMax<string>("ravi", "manoj", "sindhu").TestMaximumValue();
+                    break;
+                
+                case 6:
+                    new FindMaxUsingSort<int>(intArr).PrintResult();
                     break;
                 
             }    
