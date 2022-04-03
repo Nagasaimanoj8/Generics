@@ -44,10 +44,7 @@ namespace Generics
                 case 4:
                     int x = 34, y = 23, z = 12;
                     Console.WriteLine("Max value{0} out of {1},{2},{3}",FindMaximum.FindMax(x,y,z),x,y,z);
-                   
-                    break ;
-                case5:
-                   
+                    
                     break;
 
             }
