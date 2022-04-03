@@ -11,11 +11,13 @@ namespace Generics
     {
         static void Main(string[] args)
         {
-            int[] intArr = { 1, 2, 3 };
+            int[] intArr = { 1, 2, 73,56 };
             double[] doubleArr = { 10.34, 34.36, 23.78, 56.12 };
             char[] charArr = { 'H', 'E', 'L', 'L', 'L', 'O' };
-            Console.WriteLine("1:PrintArray without generic method\n2:PrintArray with method\n3:GenericClass Concept\n4:FindMaximum Value\n" +
-                "");
+            Console.WriteLine("1:PrintArray without generic method\n2:PrintArray with method\n3:GenericClass Concept\n" +
+                "4:FindMaximum Value\n5:GenericFindMax\n"); 
+               
+               
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -31,8 +33,8 @@ namespace Generics
                     GenericPrintArray.PrintAnArray<int>(intArr);
                     GenericPrintArray.PrintAnArray<double>(doubleArr);
                     GenericPrintArray.PrintAnArray<char>(charArr);
-                    break ;
-                    case 3:
+                    break;
+                case 3:
                     Console.WriteLine("\n Generic Class");
                     GenericClass<int> intObj = new GenericClass<int>(intArr);//create object
                     intObj.PrintAnArray();
@@ -40,25 +42,24 @@ namespace Generics
                     doubleObj.PrintAnArray();
                     GenericClass<char> charObj = new GenericClass<char>(charArr);
                     charObj.PrintAnArray();
-                    break ;
+                    break;
                 case 4:
-                  //  int x = 34, y = 23, z = 12;
-                   // Console.WriteLine("Max value{0} out of {1},{2},{3}",FindMaximum.FindMax(x,y,z),x,y,z);
-                   // float a = 12.34f, b = 23.34f, c = 12.45f;
-                   // Console.WriteLine("Max value{0} out of {1},{2},{3}", FindMaximum.FindMax(a, b, c), a, b, c);
-                    string s1 = "abc", s2 = "pqr", s3 ="lmn";
-                   
-                    
+                    //  int x = 34, y = 23, z = 12;
+                    // Console.WriteLine("Max value{0} out of {1},{2},{3}",FindMaximum.FindMax(x,y,z),x,y,z);
+                    float a = 12.34f, b = 23.34f, c = 12.45f;
+                    Console.WriteLine("Max value{0} out of {1},{2},{3}", FindMaximum.FindMax(a, b, c), a, b, c);
+                    string s1 = "abc", s2 = "pqr", s3 = "lmn";
                     Console.WriteLine("Max value{0} out of {1},{2},{3}", FindMaximum.FindMax(s1, s2, s3), s1, s2, s3);
 
                     break;
-               
 
-            }
-
-
-
-            
+                case 5:
+                    new GenericFindMax<int>(10,34,56).TestMaximumValue();//create object
+                    new GenericFindMax<float>(70.23f, 23.34f, 25.56f).TestMaximumValue();
+                    new GenericFindMax<string>("ravi", "manoj", "sindhu").TestMaximumValue();
+                    break;
+                
+            }    
             Console.ReadLine();
 
 
