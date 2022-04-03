@@ -15,7 +15,7 @@ namespace Generics
             double[] doubleArr = { 10.34, 34.36, 23.78, 56.12 };
             char[] charArr = { 'H', 'E', 'L', 'L', 'L', 'O' };
             Console.WriteLine("1:PrintArray without generic method\n2:PrintArray with method\n3:GenericClass Concept\n" +
-                "4:FindMaximum Value\n float");
+                "4:FindMaximum Value\n 4:FindMaximum float Value");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -44,11 +44,10 @@ namespace Generics
                 case 4:
                     int x = 34, y = 23, z = 12;
                     Console.WriteLine("Max value{0} out of {1},{2},{3}",FindMaximum.FindMax(x,y,z),x,y,z);
-                    float a = 12.34f, b = 23.34f, c = 12.45f;
-                    Console.WriteLine("Max value{0} out of {1},{2},{3}", FindMaximum.FindMax(a, b, c), a, b, c);
                     break ;
                 case5:
-                   
+                    float a = 12.34f, b = 23.34f, c = 12.45f;
+                    Console.WriteLine("Max value{0} out of {1},{2},{3}", FindMaximum.FindMax(a, b, c), a, b, c);
                     break;
 
             }
